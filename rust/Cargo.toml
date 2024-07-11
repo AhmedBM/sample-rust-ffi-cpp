@@ -1,0 +1,10 @@
+[package]
+name = "rust_ffi"
+version = "1.0.0"
+
+[dependencies]
+libc = "0.2"
+
+[[bin]]
+name = "rust_ffi"
+path = "main.rs"
