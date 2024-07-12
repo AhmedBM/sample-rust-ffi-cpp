@@ -4,7 +4,7 @@ This repository contains a sample project demonstrating how to use Rust's Foreig
 
 ## Prerequisites
 
-Before getting started, make sure you have the following dependencies installed:
+Before getting started, make sure you have the following dependencies installed or just use the included [DevContainer](.devcontainer/devcontainer.json) by using the [Remote - Containers](https://aka.ms/vscode-remote/download/containers) VSCode extension.
 
 - Rust: [Install Rust](https://www.rust-lang.org/tools/install)
 - CMake (=> 3.19): [Install CMake](https://cmake.org/install/)
@@ -30,8 +30,7 @@ To build and run the project, follow these steps:
 3. Build the code in its own directory:
 
     ```shell
-    mkdir build
-    cd build
+    mkdir build && cd build
     cmake ..
     cmake --build .
     ```
