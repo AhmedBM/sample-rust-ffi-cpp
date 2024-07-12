@@ -25,7 +25,6 @@ fn main() {
     println!("The string from C is: {}", get_string_from_cpp());
 }
 
-// TODO: Figure out how to get CTest to work with Rust Tests
 #[cfg(test)]
 mod tests {
     use super::*;

@@ -40,9 +40,27 @@ To build and run the project, follow these steps:
     ```shell
     rust/rust_ffi
     ```
+
 The sample Rust application will then print on the console thge values retreived from the C
 
 ```shell
 The integer from C is: 7
 The string from C is: Hello from C++!
+```
+
+## CTest Integration
+
+The Rust tests also work with CTest, running `ctest` from the build folder will also execute the tests. In order for tests to be discovered, they must be explicitly added using the `add_rust_test` macro.
+
+```shell
+root@f5b9e10edcdf:/workspaces/ffi-sample/build# ctest
+Test project /workspaces/ffi-sample/build
+    Start 1: test_get_string_from_cpp
+1/2 Test #1: test_get_string_from_cpp .........   Passed    0.06 sec
+    Start 2: test_get_integer
+2/2 Test #2: test_get_integer .................   Passed    0.07 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.13 sec
 ```
