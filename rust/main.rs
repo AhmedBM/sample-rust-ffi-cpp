@@ -3,6 +3,8 @@ use libc::c_char;
 use std::ffi::CStr;
 use std::str;
 
+#[link(name = "HelloFromCPP")]
+#[link(name = "stdc++")]
 extern "C" {
     fn get_string()  -> *mut c_char;
     fn get_integer() -> i32;
@@ -31,5 +33,10 @@ mod tests {
     #[test]
     fn test_get_string_from_cpp() {
         assert_eq!(get_string_from_cpp(), "Hello from C++!");
+    }
+
+    #[test]
+    fn test_get_integer() {
+        assert_eq!(unsafe{get_integer()}, 7);
     }
 }
