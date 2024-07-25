@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.19)
 project(ffi_sample)
 enable_testing()
+add_subdirectory(corrosion)
 add_subdirectory(cpp)
 add_subdirectory(rust)

@@ -1,6 +1,6 @@
-project(cpp_lib)
+project(cpp_ffi)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CPP_FFI_LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
-add_library(HelloFromCPP STATIC main.cpp)
-set_target_properties(HelloFromCPP PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
+add_subdirectory(lib)
+add_subdirectory(exe)

@@ -1,0 +1,10 @@
+[package]
+name = "rust_ffi_lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+# https://doc.rust-lang.org/cargo/reference/cargo-targets.html#library
+[lib]
+crate-type = ["staticlib"]
