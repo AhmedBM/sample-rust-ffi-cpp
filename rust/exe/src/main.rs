@@ -1,10 +1,13 @@
 extern crate libc;
+// extern crate rust_ffi_lib;
 use libc::c_char;
 use std::ffi::CStr;
 use std::str;
 use std::ffi::c_void;
+// use rust_ffi_lib::send_vector_to_cpp;
 
-#[link(name = "HelloFromCPP")]
+#[link(name = "HelloFromCPPLib")]
+// #[link(name = "rust_ffi_lib")]
 #[link(name = "stdc++")]
 extern "C" {
     fn get_string()  -> *mut c_char;

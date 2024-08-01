@@ -1,10 +1,11 @@
 [package]
-name = "rust_ffi"
+name = "rust_ffi_exe"
 version = "1.0.0"
 
 [dependencies]
 libc = "0.2"
+rust_ffi_lib = { path = "../lib" }
 
 [[bin]]
-name = "rust_ffi"
-path = "main.rs"
+name = "rust_ffi_exe"
+path = "src/main.rs"
